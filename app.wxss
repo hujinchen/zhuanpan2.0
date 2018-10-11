@@ -1,0 +1,55 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+} 
+
+.button-hover-class{
+    -webkit-transform:translate(2px,2px);
+    -moz-transform:translate(2px,2px);
+}
+
+.button-hover-class-shu{
+    -webkit-transform:translate(0px,2px);
+    -moz-transform:translate(0px,2px);
+}
+
+button::after{
+    border:none;
+}
+
+button{
+    border-radius:0px;
+    background-color:none;
+}
+
+
+/**自定义提示框**/
+.my-toast {
+  position: absolute;
+  left:0rpx;
+  bottom: 400rpx;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-toast-view {
+  max-width: 80%;
+  padding: 20rpx;
+  background: #4F4F4F; 
+  opacity: 0.9;
+  border-radius: 10rpx;
+  z-index: 999999;
+}
+
+.my-toast-text {
+  color: #FFFFFF;
+  font-size: 32rpx;
+}

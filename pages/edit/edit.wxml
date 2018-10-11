@@ -1,0 +1,33 @@
+<!--pages/edit/edit.wxml-->
+<view class="container">
+   <view class="modules_box modules_question_box">
+      <view class="modules_icon_box">
+         <image class="modules_icon" mode="scaleToFill" src="https://gamesdata.oss-cn-hangzhou.aliyuncs.com/xiaojueding/icon_edit_question_60.png"></image>
+      </view>
+      <view class="modules_input_box">
+         <input bindinput="checkQuestion" class="modules_input" maxlength="21" placeholder="小决定名称 | 限21位中英文数字？" placeholderStyle="color:#cfcfcf;" type="text" value="{{name}}"></input>
+      </view>
+   </view>
+
+   <view class="modules_box modules_answer_box" wx:for="{{input_answer_list}}" wx:key="unique">
+      <view bindtap="subAnswer" class="modules_icon_box" data-index="{{index}}">
+         <image class="modules_icon" mode="scaleToFill" src="https://gamesdata.oss-cn-hangzhou.aliyuncs.com/xiaojueding/icon_edit_sub_60.png"></image>
+      </view>
+      <view class="modules_input_box">
+         <input bindinput="checkAnswer" class="modules_input" data-index="{{index}}" maxlength="13" placeholder="小决定选项 | 限13位中英文数字" placeholderStyle="color:#cfcfcf" type="text" value="{{item.name}}"></input>
+      </view>
+   </view>
+
+   <view bindtap="addAnswer" class="modules_box modules_add_box">
+      <view class="modules_icon_box">
+         <image class="modules_icon" mode="scaleToFill" src="https://gamesdata.oss-cn-hangzhou.aliyuncs.com/xiaojueding/icon_edit_add_60.png"></image>
+      </view>
+      <view class="modules_word_box">
+         <view class="modules_word">增加选项</view>
+      </view>
+   </view>
+
+   <view bindtap="saveQA" class="modules_box modules_save_box">
+      <view class="modules_icon_box">保存</view>
+   </view>
+</view>

@@ -1,0 +1,41 @@
+.content{
+  width: 90%;
+  height: 600rpx;
+  background-color: #666;
+  margin: 0 auto;
+  margin-top: 100rpx;
+  position: relative;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.canvasI{
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto auto;
+  transition:all 3s ease;
+}
+.canvasII{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto auto;
+}
+.start{
+  position: absolute;
+  width: 50px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+}

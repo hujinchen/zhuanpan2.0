@@ -1,0 +1,43 @@
+{
+   "pages": [
+      "pages/index/index",
+      "pages/list/list",
+      "pages/set/set",
+      "pages/edit/edit",
+      "pages/ceshi/ceshi"
+   ],
+   "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarTitleText": "",
+      "navigationBarBackgroundColor": "#ffffff",
+      "navigationBarTextStyle": "black",
+      "backgroundColor": "#FAE8B6"
+   },
+   "tabBar": {
+      "color": "#7a7a7a",
+      "selectedColor": "#007aff",
+      "backgroundColor": "#ffffff",
+      "borderStyle": "black",
+      "position": "bottom",
+      "list": [
+         {
+            "pagePath": "pages/index/index",
+            "text": "首页",
+            "iconPath": "images/icon_tab_index_81.png",
+            "selectedIconPath": "images/icon_tab_index_select_81.png"
+         },
+         {
+            "pagePath": "pages/list/list",
+            "text": "创建小决定",
+            "iconPath": "images/icon_tab_list_81.png",
+            "selectedIconPath": "images/icon_tab_list_select_81.png"
+         },
+         {
+            "pagePath": "pages/set/set",
+            "text": "设置",
+            "iconPath": "images/icon_tab_set_81.png",
+            "selectedIconPath": "images/icon_tab_set_select_81.png"
+         }
+      ]
+   }
+}

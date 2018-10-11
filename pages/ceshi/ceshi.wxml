@@ -1,0 +1,8 @@
+<!--pages/ceshi/ceshi.wxml-->
+<view class='content'>
+   <!-- 边上跑马灯 -->
+  <canvas canvas-id='bgCanvas' class='canvasII'></canvas>
+  <canvas canvas-id='canvasI' class='canvasI' style="{{isRotate?'transform:rotate('+isRotate+'deg)':''}}"></canvas>
+  <image mode='widthFix' src='/images/canvas_button_go_unclick.png' class='start' catchtap='start'></image>
+</view>
+

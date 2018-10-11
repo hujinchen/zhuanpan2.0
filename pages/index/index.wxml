@@ -1,0 +1,50 @@
+<!--pages/index/index.wxml-->
+<view style="height:100%">
+   <view style='width:100%;margin:0 auto;text-align:center;font-size:34rpx;margin-bottom:10rpx;'>{{awardsConfig.option}}</view>
+   <view style='width:100%;margin:0 auto;text-align:center;margin-bottom:44rpx;color:#1078e7;font-size:30rpx'>{{s_awards}}</view>
+   
+   <!-- myAwards就是当被子组件触发时的函数 size:转盘大小 -->
+   <zhuanpan id='zhuanpan' 
+   bind:myData='getData' 
+   bind:myAwards="getAwards" 
+   bind:startZhuan="startZhuan" 
+   size='{{size}}' 
+   musicflg='{{musicflg}}' 
+   fastJuedin='{{fastJuedin}}' 
+   repeat='{{repeat}}' 
+   zhuanpanArr='{{xiaojuedingArr}}' 
+   awardsConfig='{{awardsConfig}}'>
+   </zhuanpan>
+
+   <view style='margin-top:60rpx'></view>
+
+   <view class='juedinoption' wx:for='{{xiaojuedingArr}}' wx:key='key' wx:if='{{index<3 && share}}' bindtap='xiaojueding' data-idx='{{index}}'>{{item.option}}</view>
+
+   <view class='share' wx:if='{{!share}}'>
+      <button class="index__share" openType="share">
+         转发给朋友
+      </button>
+      <button class="index__share" bindtap='generate'>
+         分享到朋友圈
+      </button>
+   </view>
+</view>
+
+<block wx:if="{{saveFrameFlag}}">
+   <view class="middle-flex-column-center" style="position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.2);z-index:10000;">
+      <view class="middle-flex-column-center" style="width:600rpx;height:920rpx;background:#ffffff;border-radius:16rpx;">
+         <view style="width:400rpx;height:650rpx;">
+            <image style="width:100%;height:100%;" src="{{shengchengUrl}}"></image>
+         </view>
+         <view style="width:600rpx;height:80rpx;line-height:80rpx;text-align:center;font-size:28rpx;color:#1078e7;">保存后分享到朋友圈</view>
+         <view style="width:600rpx;height:70rpx;" class="middle-flex-row-center">
+            <button style="margin:0;padding:0;width:200rpx;height:70rpx;color: #1078e7;border-radius: 8rpx;border: 1px solid #1078e7;background: none;font-size: 28rpx;text-align:center;line-height:70rpx;" bindtap='closeSaveFrame'>关闭</button>
+            <button style="margin:0;padding:0;width:200rpx;height:70rpx;color: #1078e7;border-radius: 8rpx;border: 1px solid #1078e7;background: none;font-size: 28rpx;text-align:center;line-height:70rpx;margin-left:30rpx;" bindtap='saveImage'>保存图片</button>
+         </view>
+      </view>
+   </view>
+</block>
+
+<block wx:if="{{showCanvasFlag}}">
+   <canvas canvas-id="shareCanvas" style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;border:1px dashed black;"></canvas>
+</block>
